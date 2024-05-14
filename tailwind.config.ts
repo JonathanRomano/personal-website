@@ -11,12 +11,18 @@ const config: Config = {
       colors: {
         "dark-blue": "#000022",
         primary: "#1BA7E1",
+        neutral: "#090828",
         secondary: "#BBBBD0",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      aspectRatio: {
+        custom: "1362 / 2315",
+        logo: "1600 / 768",
+        retangle: "16 / 9",
       },
     },
   },

@@ -4,17 +4,19 @@ import { MouseEventHandler, useState } from "react";
 
 interface AnimatedButtonProps {
   text: string;
-  onClick: () => Promise<void> | void;
+  onClick?: () => Promise<void> | void;
   className?: string;
 }
 
 const AnimatedButton = ({ text, onClick, className }: AnimatedButtonProps) => {
   const [pending, setPending] = useState(false);
   const handleClick: MouseEventHandler<HTMLButtonElement> = async (e) => {
-    e.preventDefault();
-    setPending(true);
-    await onClick();
-    setPending(false);
+    if (onClick) {
+      e.preventDefault();
+      setPending(true);
+      await onClick!();
+      setPending(false);
+    }
   };
   return (
     <motion.button
