@@ -32,8 +32,7 @@ const ExperienceCounter = () => {
   return (
     <motion.span
       ref={ref}
-      className="flex flex-col justify-center items-center text-white font-bold text-[30rem] leading-none"
-      initial={{ scale: 0.5 }}
+      className="flex flex-col justify-center items-center text-white font-bold text-[15rem] leading-none"
       onAnimationComplete={() => console.log(23)}
       transition={{
         type: "spring",
@@ -42,7 +41,7 @@ const ExperienceCounter = () => {
       }}
     >
       {year}
-      <h1 className="text-4xl text-primary pt-2">Years of Experience</h1>
+      <h1 className="text-2xl text-primary pt-2">Years of Experience</h1>
     </motion.span>
   );
 };
