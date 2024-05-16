@@ -15,9 +15,10 @@ import {
 } from "react-icons/bi";
 import Link from "next/link";
 import Slider from "@/components/slider";
+import NavBar from "@/components/navBar";
 
 export default function Home() {
-  const cards = [
+  const habilitiesCards = [
     {
       title: "Websites",
       description:
@@ -50,7 +51,8 @@ export default function Home() {
 
   return (
     <main className="bg-dark-blue">
-      <div className="pt-36 pb-20 flex justify-center">
+      <NavBar />
+      <div className="pt-36 pb-20 flex justify-center" id="home">
         <div className="w-1/3 flex flex-col justify-center">
           <AnimationProvider>
             <h1 className="text-4xl font-bold text-white">
@@ -85,7 +87,12 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <h1 className="text-center text-4xl font-bold text-white">About me</h1>
+      <h1
+        className="text-center text-4xl font-bold text-white pt-10"
+        id="about-me"
+      >
+        About me
+      </h1>
       <div className="flex justify-center">
         <div className="w-1/3">
           <ExperienceCounter />
@@ -121,7 +128,7 @@ export default function Home() {
       </h1>
 
       <div className="flex flex-wrap gap-6 justify-center pt-6 items-stretch">
-        {cards.map((card) => {
+        {habilitiesCards.map((card) => {
           return (
             <div className="w-4/12">
               <AnimationProvider className="h-full">
@@ -132,7 +139,7 @@ export default function Home() {
         })}
       </div>
 
-      <div className="pb-36 pt-20 px-64 flex flex-col">
+      <div className="mt-10 pt-10 px-64 flex flex-col" id="portfolio">
         <h1 className="text-center text-4xl font-bold text-white">
           Some of my work
         </h1>
@@ -164,7 +171,7 @@ export default function Home() {
         </Slider>
       </div>
 
-      <div className="pb-36 flex items-center justify-center">
+      <div className="py-36 flex items-center justify-center" id="contact">
         <div className="w-7/12 bg-neutral flex flex-col items-center rounded-lg">
           <div className="h-36" />
           <AnimationProvider>
@@ -209,7 +216,7 @@ export default function Home() {
         </p>
         <div className="flex justify-between px-[18vw] pt-20 pb-10">
           <div className="text-secondary text-sm">
-            © 2024, Jonathan Romano. All rights reserved.
+            © 2024, Jonathan Lauxen Romano. All rights reserved.
           </div>
           <div className="text-secondary flex gap-1 items-center">
             <p className="pr-3 text-sm"> GIVE A LOOK</p>

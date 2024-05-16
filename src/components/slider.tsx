@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { PanInfo, motion, useMotionValue, useTransform } from "framer-motion";
 import React, { useState, ReactNode } from "react";
 import AnimatedButton from "./animatedButton";
 
@@ -15,7 +15,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
 
   const x = useMotionValue(0);
   const input = [-200, 0, 200]; // Range of dragging
-  const output = [0.7, 1, 0.7]; // Scale values corresponding to drag positions
+  const output = [0.7, 1, 0.7]; // rotatio values corresponding to drag positions
   const scale = useTransform(x, input, output);
 
   const handleNext = () => {
@@ -28,7 +28,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
     );
   };
 
-  const handleDragEnd = (event, info) => {
+  const handleDragEnd = (event: MouseEvent, info: PanInfo) => {
     event.preventDefault();
     const offset = info.offset.x;
     const velocity = info.velocity.x;
@@ -48,7 +48,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
         onDragEnd={handleDragEnd}
-        style={{ x, scale }}
+        style={{ x }}
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
