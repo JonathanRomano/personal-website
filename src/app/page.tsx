@@ -142,7 +142,7 @@ export default function Home() {
         })}
       </div>
 
-      <div className="mt-16 pt-10 px-64 flex flex-col" id="portfolio">
+      <div className="mt-16 pt-10 px-64 hidden flex-col" id="portfolio">
         <h1 className="text-center text-4xl font-bold text-white">
           Some of my work
         </h1>
