@@ -174,20 +174,23 @@ export default function Home() {
         </Slider>
       </div>
 
-      <div className="py-36 flex items-center justify-center" id="contact">
-        <div className="w-auto px-14 lg:px-40 bg-neutral flex flex-col items-center rounded-lg">
+      <div
+        className="py-10 md:py-36 flex items-center justify-center"
+        id="contact"
+      >
+        <div className="w-auto px-5 md:px-14 lg:px-40 bg-neutral flex flex-col items-center rounded-lg">
           <AnimationProvider>
             <h1 className="text-2xl font-bold text-primary pt-36">
               Hire me to get best
             </h1>
           </AnimationProvider>
           <AnimationProvider>
-            <h1 className="text-white font-bold text-3xl lg:text-4xl pt-12">
+            <h1 className="text-white font-bold text-2xl md:text-3xl lg:text-4xl pt-12">
               Want to start your next project with me?
             </h1>
           </AnimationProvider>
           <AnimationProvider>
-            <h1 className="text-white font-bold text-5xl lg:text-6xl">
+            <h1 className="text-white font-bold text-2xl md:text-5xl lg:text-6xl">
               Let&apos;s chat about your goals
             </h1>
           </AnimationProvider>
