@@ -131,9 +131,9 @@ export default function Home() {
       </h1>
 
       <div className="flex flex-wrap gap-6 justify-center pt-6 items-stretch">
-        {habilitiesCards.map((card) => {
+        {habilitiesCards.map((card, index) => {
           return (
-            <div className="w-4/5 lg:w-4/12">
+            <div className="w-4/5 lg:w-4/12" key={index}>
               <AnimationProvider className="h-full">
                 <Card cardDictionary={card} />
               </AnimationProvider>
