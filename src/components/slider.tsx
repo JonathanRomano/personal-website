@@ -15,8 +15,8 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
 
   const x = useMotionValue(0);
   const input = [-200, 0, 200]; // Range of dragging
-  const output = [1, 1, 1]; // Opacity values corresponding to drag positions
-  const opacity = useTransform(x, input, output);
+  const output = [0.7, 1, 0.7]; // Scale values corresponding to drag positions
+  const scale = useTransform(x, input, output);
 
   const handleNext = () => {
     setActiveIndex((prevIndex) => (prevIndex + 1) % totalChildren);
@@ -29,6 +29,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
   };
 
   const handleDragEnd = (event, info) => {
+    event.preventDefault();
     const offset = info.offset.x;
     const velocity = info.velocity.x;
 
@@ -47,7 +48,7 @@ const Slider: React.FC<SliderProps> = ({ children }) => {
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.1}
         onDragEnd={handleDragEnd}
-        style={{ x, opacity }}
+        style={{ x, scale }}
         initial={{ opacity: 0.5 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
