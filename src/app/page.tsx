@@ -52,13 +52,16 @@ export default function Home() {
   return (
     <main className="bg-dark-blue">
       <NavBar />
-      <div className="pt-36 pb-20 flex justify-center" id="home">
-        <div className="w-1/3 flex flex-col justify-center">
+      <div
+        className="pt-36 pb-20 flex flex-col-reverse lg:flex-row items-center justify-center gap-10"
+        id="home"
+      >
+        <div className="w-auto mr-10 flex flex-col justify-center">
           <AnimationProvider>
             <h1 className="text-4xl font-bold text-white">
               I'm Jonathan Romano, a
             </h1>
-            <h1 className="text-5xl font-bold text-primary">
+            <h1 className="text-5xl font-bold text-primary ">
               Software Developer
             </h1>
             <p className="font-bold text-secondary pt-5">
@@ -72,7 +75,7 @@ export default function Home() {
           </AnimationProvider>
         </div>
 
-        <div className="flex items-center w-1/5 bg-neutral pt-32 pl-10 pr-10 rounded-lg overflow-hidden">
+        <div className="flex items-center w-2/5 lg:w-1/5 bg-neutral pt-32 pl-10 pr-10 rounded-lg overflow-hidden">
           <div className="relative w-full aspect-custom">
             <Image
               src="/hero.png"
@@ -93,11 +96,11 @@ export default function Home() {
       >
         About me
       </h1>
-      <div className="flex justify-center">
-        <div className="w-1/3">
+      <div className="flex flex-col lg:flex-row items-center justify-center pt-10 pb-20 gap-5">
+        <div className="w-auto lg:w-1/3">
           <ExperienceCounter />
         </div>
-        <div className="w-1/3 text-secondary flex flex-col justify-center gap-5">
+        <div className="w-4/5 lg:w-1/3 text-secondary flex flex-col justify-center gap-5">
           <AnimationProvider>
             <p>
               Since my childhood, technology has always sparked a deep
@@ -123,14 +126,14 @@ export default function Home() {
           </AnimationProvider>
         </div>
       </div>
-      <h1 className="text-center text-4xl font-bold text-white pb-12">
+      <h1 className="text-center text-4xl font-bold text-white pb-12 pt-10">
         My expertise
       </h1>
 
       <div className="flex flex-wrap gap-6 justify-center pt-6 items-stretch">
         {habilitiesCards.map((card) => {
           return (
-            <div className="w-4/12">
+            <div className="w-4/5 lg:w-4/12">
               <AnimationProvider className="h-full">
                 <Card cardDictionary={card} />
               </AnimationProvider>
@@ -139,7 +142,7 @@ export default function Home() {
         })}
       </div>
 
-      <div className="mt-10 pt-10 px-64 flex flex-col" id="portfolio">
+      <div className="mt-16 pt-10 px-64 flex flex-col" id="portfolio">
         <h1 className="text-center text-4xl font-bold text-white">
           Some of my work
         </h1>
@@ -172,20 +175,19 @@ export default function Home() {
       </div>
 
       <div className="py-36 flex items-center justify-center" id="contact">
-        <div className="w-7/12 bg-neutral flex flex-col items-center rounded-lg">
-          <div className="h-36" />
+        <div className="w-auto px-14 lg:px-40 bg-neutral flex flex-col items-center rounded-lg">
           <AnimationProvider>
-            <h1 className="text-2xl font-bold text-primary">
+            <h1 className="text-2xl font-bold text-primary pt-36">
               Hire me to get best
             </h1>
           </AnimationProvider>
           <AnimationProvider>
-            <h1 className="text-white font-bold text-4xl pt-12">
+            <h1 className="text-white font-bold text-3xl lg:text-4xl pt-12">
               Want to start your next project with me?
             </h1>
           </AnimationProvider>
           <AnimationProvider>
-            <h1 className="text-white font-bold text-6xl">
+            <h1 className="text-white font-bold text-5xl lg:text-6xl">
               Let's chat about your goals
             </h1>
           </AnimationProvider>
