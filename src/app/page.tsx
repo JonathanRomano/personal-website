@@ -59,7 +59,7 @@ export default function Home() {
         <div className="w-auto mr-10 flex flex-col justify-center">
           <AnimationProvider>
             <h1 className="text-4xl font-bold text-white">
-              I'm Jonathan Romano, a
+              I&apos;m Jonathan Romano, a
             </h1>
             <h1 className="text-5xl font-bold text-primary ">
               Software Developer
@@ -188,7 +188,7 @@ export default function Home() {
           </AnimationProvider>
           <AnimationProvider>
             <h1 className="text-white font-bold text-5xl lg:text-6xl">
-              Let's chat about your goals
+              Let&apos;s chat about your goals
             </h1>
           </AnimationProvider>
           <AnimationProvider>
